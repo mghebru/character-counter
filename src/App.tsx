@@ -1,14 +1,18 @@
 import './App.css'
-import { TextInput } from './components/TextInput/TextInput'
+import CharacterCounter from './components/CharacterCounter/CharacterCounter'
 
 function App() {
   
   return (
     <>
-      <TextInput onTextChange={function (text: string): void {
-        throw new Error('Function not implemented.')
-      } } />
-    </>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <CharacterCounter
+        minWords={25}
+        maxWords={100}
+        targetReadingTime={2}
+        />
+    </div>
+        </>
   )
 }
 
