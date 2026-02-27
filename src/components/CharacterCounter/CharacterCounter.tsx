@@ -26,11 +26,6 @@ const CharacterCounter: React.FC<CharacterCounterProps> = ({
     };
   }, [text]);
 
-  const progressPercentage = Math.min(
-    (stats.wordCount / maxWords) * 100,
-    100
-  );
-
   const isBelowMin = stats.wordCount < minWords;
   const isAboveMax = stats.wordCount > maxWords;
 
