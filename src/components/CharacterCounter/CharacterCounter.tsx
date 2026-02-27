@@ -46,19 +46,6 @@ const CharacterCounter: React.FC<CharacterCounterProps> = ({
           Min: {minWords} | Max: {maxWords}
         </p>
 
-        <div className="w-full bg-gray-200 h-3 rounded mt-2">
-          <div
-            className={`h-3 rounded ${
-              isBelowMin
-                ? "bg-red-400"
-                : isAboveMax
-                ? "bg-yellow-400"
-                : "bg-green-500"
-            }`}
-            style={{ width: `${progressPercentage}%` }}
-          />
-        </div>
-
         {isBelowMin && (
           <p className="text-red-500 text-sm mt-1">
             You need {minWords - stats.wordCount} more words.
